@@ -18,6 +18,8 @@ function App() {
       setQuote(result.data[0].quoteText)
       setAuthor(result.data[0].quoteAuthor)
       setGenre(result.data[0].quoteGenre)
+      setSingleQuote(true)
+      setQuotes([])
     });
   }
 
@@ -31,23 +33,33 @@ function App() {
   }
   return (
     <div className="App">
-      <button onClick={getRandomQuote}>Random</button>
+      <header>
+        <button className="random-button" onClick={getRandomQuote}>
+          random <span class="material-icons">refresh</span>
+        </button>
+      </header>
       { singleQuote && (
-        <div>
-          <p>{quote}</p>
-          <div onClick={getAllQuotes}>
-            <p>{author}</p>
-            <p>{genre}</p>
+        <div className='singleQuote'>
+          <h1>"{quote}"</h1>
+          <div className='getAllButton' onClick={getAllQuotes}>
+            <div>
+              <p className='author'>{author}</p>
+              <p className='genre'>{genre}</p>
+            </div>
+            <span className='material-icons'>east</span>
           </div>
         </div>
       )}
       { !singleQuote && (
-        <div>
-          <p>{author}</p>
+        <div className='allQuotes'>
+          <h1><span onClick={()=>setSingleQuote(true)} className='material-icons not-vertical'>west</span>{author}</h1>
           {quotes.map((word, key)=>{
-            return (<div key={key}> {word.quoteText} </div>)
+            return (
+              <div key={key}> 
+                "{word.quoteText}" 
+              </div>
+            )
           })}
-          <button onClick={()=>setSingleQuote(true)}>Return</button>
         </div>
       )}
       
