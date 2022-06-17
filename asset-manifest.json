@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/DevChallenge-QuoteGenerator/static/css/main.2ab4b467.css",
+    "main.js": "/DevChallenge-QuoteGenerator/static/js/main.7f3f0810.js",
+    "index.html": "/DevChallenge-QuoteGenerator/index.html",
+    "main.2ab4b467.css.map": "/DevChallenge-QuoteGenerator/static/css/main.2ab4b467.css.map",
+    "main.7f3f0810.js.map": "/DevChallenge-QuoteGenerator/static/js/main.7f3f0810.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ab4b467.css",
+    "static/js/main.7f3f0810.js"
+  ]
+}
